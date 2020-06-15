@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static class PlaceholderFragment extends Fragment {
-
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
@@ -73,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
             fragment.setArguments(args);
             return fragment;
         }
-
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -122,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                     User user = new User(Profile.getCurrentProfile().getId(), fullName);
                     myRef.child("Users").child(Profile.getCurrentProfile().getId()).setValue(user);
                 }
-
             }
 
             @Override
